@@ -1,0 +1,280 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f8f9fa;
+    background-color: #121212;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden; /* Добавлено для предотвращения горизонтального скролла */
+}
+
+a {
+    text-decoration: none;
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00ff4c;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #27bd4d;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #27bd4d;
+    color: #fff;
+    transform: translateY(-2px);
+}
+header {
+    display: flex;
+    justify-content: center; /* Изменено на центрирование */
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    position: relative; /* Добавлено для позиционирования логотипа */
+}
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Добавлено для позиционирования логотипа */
+    left: 20px; /* Добавлено для позиционирования логотипа */
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 50%;
+}
+
+nav ul li a {
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ff4c;
+    transform: translateY(-2px);
+}
+.product-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease 0.2s forwards;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.5s ease 0.4s forwards;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавлено для тени */
+}
+
+.product-info {
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease 0.6s forwards;
+}
+
+.product-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #27bd4d; /* Добавлено для подчеркивания */
+    padding-bottom: 10px; /* Добавлено для подчеркивания */
+}
+
+.product-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Добавлено для улучшения читаемости */
+}
+
+.product-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.product-info ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative; /* Добавлено для позиционирования маркера */
+    padding-left: 20px; /* Добавлено для позиционирования маркера */
+}
+
+.product-info ul li::before {
+    content: '•'; /* Добавлен маркер */
+    color: #27bd4d; /* Цвет маркера */
+    position: absolute; /* Позиционирование маркера */
+    left: 0; /* Позиционирование маркера */
+}
+
+.product-info .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #27bd4d; /* Добавлен цвет для цены */
+}
+footer {
+    background-color: #121212;
+    color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease 0.8s forwards;
+    border-top: 1px solid #27bd4d; /* Добавлено для разделения */
+    position: relative; /* Добавлено для позиционирования элементов */
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #27bd4d, transparent); /* Добавлен градиент */
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer .footer-content .footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+footer .footer-content .footer-links a {
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-content .footer-links a:hover {
+    color: #00ff4c;
+}
+
+footer .footer-content .footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+footer .footer-content .footer-social a {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-content .footer-social a:hover {
+    color: #00ff4c;
+}
+
+footer .footer-content .footer-text {
+    font-size: 14px;
+    margin-top: 20px;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

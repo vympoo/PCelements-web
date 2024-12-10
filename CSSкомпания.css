@@ -1,0 +1,321 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f8f9fa;
+    background-color: #121212;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+}
+
+a {
+    text-decoration: none;
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00ff4c;
+}
+
+.btn {
+    align-items: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #27bd4d;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #27bd4d;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 50%;
+    position: relative; /* Для всплывающего меню */
+}
+
+nav ul li {
+    position: relative; /* Для всплывающего меню */
+}
+
+nav ul li a {
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ff4c;
+    transform: translateY(-2px);
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials a {
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover {
+    color: #00ff4c;
+    transform: scale(1.2);
+}
+
+/* О нас */
+.about {
+    padding: 50px 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.3s ease 0.2s forwards; /* Ускорена анимация */
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about h2:last-of-type {
+    color: #00ff4c;
+}
+
+/* Отзывы */
+.reviews {
+    padding: 50px 20px;
+    background-color: #121212;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.3s ease 0.4s forwards; /* Ускорена анимация */
+}
+
+.reviews h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.review-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review-item {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.3s ease 0.6s forwards; /* Ускорена анимация */
+}
+
+.review-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.review-item img:hover {
+    transform: scale(1.05);
+}
+
+.review-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.review-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Наши работы */
+.works {
+    padding: 50px 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.3s ease 0.8s forwards; /* Ускорена анимация */
+}
+
+.works h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.work-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.work-item {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.3s ease 1s forwards; /* Ускорена анимация */
+}
+
+.work-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.work-item img:hover {
+    transform: scale(1.05);
+}
+
+.work-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Футер */
+footer {
+    background-color: #121212;
+    color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+footer .socials a {
+    color: #f8f9fa;
+    margin-left: 10px;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .socials a:hover {
+    color: #00ff4c;
+    transform: scale(1.2);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
